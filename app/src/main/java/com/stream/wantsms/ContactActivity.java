@@ -49,7 +49,7 @@ public class ContactActivity extends Activity implements OnItemClickListener{
 			}
 
 		}catch(Exception e){
-			Toast.makeText(this, "获取联系人列表失败，您禁止了权限", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "娌℃湁鏉冮檺", Toast.LENGTH_SHORT).show();
 		}finally{
 			if(cursor!=null){
 				cursor.close();
