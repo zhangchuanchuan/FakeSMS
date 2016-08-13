@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         String n = number.getText().toString();
         String c = content.getText().toString();
         if (n.equals("") || c.equals("")) {
-            Toast.makeText(this, "ÁªÏµÈË»òÄÚÈİÎª¿Õ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "è¯·èµ‹äºˆç›¸åº”çš„æƒé™", Toast.LENGTH_SHORT).show();
         } else {
             Uri uri = Uri.parse("content://sms/");
             ContentValues value = new ContentValues();
@@ -44,9 +44,9 @@ public class MainActivity extends Activity {
             value.put("body", c);
             uri = getContentResolver().insert(uri, value);
             if (uri == null) {
-                Toast.makeText(this, "Çëµ½Ó¦ÓÃÈ¨ÏŞ¹ÜÀíÖĞ¸³ÓèĞèÒªµÄÈ¨ÏŞ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "è¯·èµ‹äºˆå“åº”çš„æƒé™", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "²Ù×÷³É¹¦", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "å†™å…¥æˆåŠŸ", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
     }
 
     /**
-     * Çå³ıÎÄ±¾¿ò
+     * ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
      *
      * @param view view
      */
