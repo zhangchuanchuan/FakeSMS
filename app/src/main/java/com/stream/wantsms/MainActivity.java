@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         String n = number.getText().toString();
         String c = content.getText().toString();
         if (n.equals("") || c.equals("")) {
-            Toast.makeText(this, "请赋予相应的权限", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "输入为空", Toast.LENGTH_SHORT).show();
         } else {
             Uri uri = Uri.parse("content://sms/");
             ContentValues value = new ContentValues();
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
             value.put("body", c);
             uri = getContentResolver().insert(uri, value);
             if (uri == null) {
-                Toast.makeText(this, "请赋予响应的权限", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "请赋予相应的权限", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "写入成功", Toast.LENGTH_SHORT).show();
             }
